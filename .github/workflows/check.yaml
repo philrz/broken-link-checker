@@ -1,0 +1,17 @@
+name: Check for broken links
+
+on:
+  workflow_dispatch:
+
+jobs:
+  broken-linkcheck
+    runs-on: ubuntu-latest
+    steps:
+    - name: check for broken links
+      uses: ruzickap/action-my-broken-link-checker@v2
+      with:
+        url: https://github.com/philrz/linkcheck
+        cmd_params:
+          --verbose
+          --buffer-size 8192
+          --one-page-only
