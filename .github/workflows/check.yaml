@@ -15,4 +15,4 @@ jobs:
           --verbose
           --buffer-size 8192
           --one-page-only
-          --exclude #:~:text=
+          --exclude "#:~:text="
