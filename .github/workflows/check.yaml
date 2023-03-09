@@ -10,7 +10,7 @@ jobs:
     - name: check for broken links
       uses: ruzickap/action-my-broken-link-checker@v2
       with:
-        url: https://github.com/philrz/linkcheck
+        url: https://github.com/philrz/linkcheck/blob/main/frag.md
         cmd_params:
           --verbose
           --buffer-size 8192
