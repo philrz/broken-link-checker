@@ -7,12 +7,15 @@ jobs:
   broken-linkcheck:
     runs-on: ubuntu-latest
     steps:
-    - name: check for broken links
-      uses: ruzickap/action-my-broken-link-checker@v2
-      with:
-        url: https://github.com/philrz/linkcheck/blob/main/frag.md
-        cmd_params:
-          --verbose
-          --buffer-size 8192
-          --one-page-only
-          --exclude "#:~:text="
+      - name: Check for broken links
+        uses: ruzickap/action-my-broken-link-checker@v2
+        with:
+          url: https://spiffy-gnome-8f2834.netlify.app
+          cmd_params:
+            --verbose
+            --buffer-size=8192
+            --header="Accept-Encoding:zstd,br,gzip,deflate"
+            --header="User-Agent:Mozilla/5.0"
+            --exclude algolia.net
+            --exclude github.com\/brimdata\/.*\/edit\/
+            --exclude www.googletagmanager.com
