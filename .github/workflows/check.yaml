@@ -10,7 +10,7 @@ jobs:
       - name: Check for broken links
         uses: ruzickap/action-my-broken-link-checker@v2
         with:
-          url: https://spiffy-gnome-8f2834.netlify.app
+          url: https://capable-khapse-fa9d06.netlify.app
           cmd_params:
             --verbose
             --buffer-size=8192
@@ -22,3 +22,4 @@ jobs:
 
 #          url: https://spiffy-gnome-8f2834.netlify.app
 #          url: https://zed.brimdata.io
+#          url: https://capable-khapse-fa9d06.netlify.app
