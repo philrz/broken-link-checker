@@ -2,6 +2,10 @@ name: Check for broken links
 
 on:
   workflow_dispatch:
+    inputs:
+      site:
+        required: true
+        type: string
 
 jobs:
   broken-linkcheck:
@@ -10,7 +14,7 @@ jobs:
       - name: Check for broken links
         uses: ruzickap/action-my-broken-link-checker@v2
         with:
-          url: https://capable-khapse-fa9d06.netlify.app
+          url: ${{ inputs.site }
           cmd_params:
             --verbose
             --timeout 300
