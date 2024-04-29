@@ -17,17 +17,10 @@ jobs:
           url: ${{ inputs.site }}
           cmd_params:
             --verbose
-            --timeout 300
             --buffer-size=8192
             --max-response-body-size 1000000000
-            --header="Accept-Encoding:zstd,br,gzip,deflate"
             --header="User-Agent:Mozilla/5.0"
-            --exclude mixpanel.com
-            --exclude linkedin.com
-            --exclude https://github.com/edgedb/edgedb#-types-not-tables-
-            --exclude https://github.com/brimdata/zed#zed--
-            --exclude https://github.com/brimdata/zed/blob/.*#L
-            --exclude "#:~:text="
+            --header="Accept-Encoding:zstd,br,gzip,deflate"
             --exclude algolia.net
             --exclude github.com\/brimdata\/.*\/edit\/
             --exclude twitter.com
@@ -36,7 +29,3 @@ jobs:
             --exclude https://github.com/brimdata/brimcap#
             --exclude https://github.com/brimdata/build-suricata.*#
             --exclude https://github.com/brimdata/brimcap/wiki.*#
-
-#          url: https://spiffy-gnome-8f2834.netlify.app
-#          url: https://zed.brimdata.io
-#          url: https://capable-khapse-fa9d06.netlify.app
