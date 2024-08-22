@@ -29,3 +29,4 @@ jobs:
             --exclude https://github.com/brimdata/brimcap.*#
             --exclude https://github.com/brimdata/zui.*#
             --exclude https://github.com/brimdata/build-suricata.*#
+            --exclude https://github.com/samsonjs/strftime.*#
