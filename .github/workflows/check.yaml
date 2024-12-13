@@ -35,8 +35,3 @@ jobs:
             --exclude https://support.virustotal.com/hc/en-us/articles/115002146769-Comments
             --exclude https://github.com/brimdata/brimcap#
             --exclude https://github.com/brimdata/build-suricata.*#
-            --exclude https://github.com/brimdata/brimcap/wiki.*#
-
-#          url: https://spiffy-gnome-8f2834.netlify.app
-#          url: https://zed.brimdata.io
-#          url: https://capable-khapse-fa9d06.netlify.app
