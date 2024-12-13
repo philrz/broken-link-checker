@@ -29,4 +29,3 @@ jobs:
             --exclude https://github.com/brimdata/zed/blob/.*#L
             --exclude "#:~:text="
             --exclude algolia.net
-            --exclude github.com\/brimdata\/.*\/edit\/
