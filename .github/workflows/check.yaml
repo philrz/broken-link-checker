@@ -20,3 +20,4 @@ jobs:
             --timeout 300
             --buffer-size=16384
             --header="Accept-Encoding:zstd,br,gzip,deflate"
+            --header="User-Agent:Mozilla/5.0"                      # LinkedIn
