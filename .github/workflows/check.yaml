@@ -19,7 +19,6 @@ jobs:
             --verbose
             --timeout 300
             --buffer-size=16384
-            --max-response-body-size 1000000000
             --header="Accept-Encoding:zstd,br,gzip,deflate"
             --header="User-Agent:Mozilla/5.0"
             --exclude mixpanel.com
