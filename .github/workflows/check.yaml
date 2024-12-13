@@ -19,4 +19,8 @@ jobs:
             --verbose
             --timeout 300
             --buffer-size=16384
-            --header="User-Agent:Mozilla/5.0"                      # LinkedIn (999) docs.zeek.org (403)
+            --header="Accept-Encoding:zstd,br,gzip,deflate"
+            --header="User-Agent:Mozilla/5.0"
+
+#            --header="Accept-Encoding:zstd,br,gzip,deflate"        # LinkedIn (999)
+#            --header="User-Agent:Mozilla/5.0"                      # LinkedIn (999) docs.zeek.org (403)
