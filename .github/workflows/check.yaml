@@ -18,10 +18,8 @@ jobs:
           cmd_params:
             --verbose
             --timeout 300
-            --buffer-size 65536
+            --buffer-size 8192
             --max-response-body-size 1000000000
-            --header="Accept-Encoding:zstd,br,gzip,deflate"
-            --header="User-Agent:Mozilla/5.0"
             --exclude mixpanel.com
             --exclude linkedin.com
             --exclude twitter.com
