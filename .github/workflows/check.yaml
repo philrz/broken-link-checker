@@ -20,6 +20,7 @@ jobs:
             --timeout 300
             --buffer-size 65536
             --max-response-body-size 1000000000
+            --header="Accept-Encoding:zstd,br,gzip,deflate"
             --exclude mixpanel.com
             --exclude linkedin.com
             --exclude twitter.com
