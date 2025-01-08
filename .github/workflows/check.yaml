@@ -18,7 +18,7 @@ jobs:
           cmd_params:
             --verbose
             --timeout 300
-            --buffer-size 8192
+            --buffer-size 65536
             --max-response-body-size 1000000000
             --header="User-Agent:Mozilla/5.0"
             --exclude mixpanel.com
