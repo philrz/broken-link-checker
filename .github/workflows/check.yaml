@@ -16,26 +16,17 @@ jobs:
         with:
           url: ${{ inputs.site }}
           cmd_params:
-            --verbose
-            --timeout 300
-            --buffer-size=65536
-            --max-response-body-size 1000000000
-            --header="Accept-Encoding:zstd,br,gzip,deflate"
-            --header="User-Agent:Mozilla/5.0"
-            --exclude mixpanel.com
-            --exclude linkedin.com
-            --exclude https://github.com/edgedb/edgedb#-types-not-tables-
-            --exclude https://github.com/brimdata/zed#zed--
-            --exclude https://github.com/brimdata/zed/blob/.*#L
-            --exclude "#:~:text="
-            --exclude algolia.net
-            --exclude github.com\/brimdata\/.*\/edit\/
-            --exclude twitter.com
-            --exclude www.googletagmanager.com
-            --exclude https://support.virustotal.com/hc/en-us/articles/115002146769-Comments
-            --exclude https://github.com/brimdata/brimcap#
-            --exclude https://github.com/brimdata/build-suricata.*#
-            --exclude https://github.com/brimdata/brimcap/wiki.*#
+          --verbose
+          --timeout 300
+          --buffer-size 8192
+          --max-response-body-size 1000000000
+          --exclude mixpanel.com
+          --exclude linkedin.com
+          --exclude twitter.com
+          --exclude https://github.com/edgedb/edgedb#-types-not-tables-
+          --exclude https://github.com/brimdata/zed#zed--
+          --exclude https://github.com/brimdata/zed/blob/.*#L
+          --exclude "#:~:text="
 
 #          url: https://spiffy-gnome-8f2834.netlify.app
 #          url: https://zed.brimdata.io
