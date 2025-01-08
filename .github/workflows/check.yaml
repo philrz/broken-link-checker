@@ -21,6 +21,7 @@ jobs:
             --buffer-size 65536
             --max-response-body-size 1000000000
             --header="Accept-Encoding:zstd,br,gzip,deflate"
+            --header="User-Agent:Mozilla/5.0"
             --exclude mixpanel.com
             --exclude linkedin.com
             --exclude twitter.com
