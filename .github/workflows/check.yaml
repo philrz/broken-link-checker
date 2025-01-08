@@ -20,6 +20,7 @@ jobs:
             --timeout 300
             --buffer-size 8192
             --max-response-body-size 1000000000
+            --header="User-Agent:Mozilla/5.0"
             --exclude mixpanel.com
             --exclude linkedin.com
             --exclude twitter.com
