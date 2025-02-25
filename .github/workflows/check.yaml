@@ -20,7 +20,7 @@ jobs:
             --timeout 300
             --buffer-size=16384
             --header="Accept-Encoding:zstd,br,gzip,deflate"
-            --header="User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
-
+            --header="User-Agent:Mozilla/5.0"
+#            --header="User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
 #            --header="Accept-Encoding:zstd,br,gzip,deflate"        # LinkedIn (999)
 #            --header="User-Agent:Mozilla/5.0"                      # LinkedIn (999) docs.zeek.org (403)
