@@ -22,4 +22,5 @@ jobs:
             --header="Accept-Encoding:zstd,br,gzip,deflate"
             --header="User-Agent:Mozilla/5.0"
             --exclude x.com
+            --exclude twitter.com
             --exclude https://github.com/lz4/lz4/blob/master/doc/lz4_Block_format.md  # Due to HTTP 429 errors
