@@ -17,6 +17,7 @@ jobs:
         with:
           url: ${{ inputs.site }}
           cmd_params:
+            --verbose
             --timeout 300
             --max-connections=5
             --max-connections-per-host=2
@@ -24,7 +25,6 @@ jobs:
             --buffer-size=16384
             --header="Accept-Encoding:zstd,br,gzip,deflate"
             --header="User-Agent:Mozilla/5.0"
-            --exclude x.com
             --exclude https://github.com/lz4/lz4/blob/master/doc/lz4_Block_format.md
             --exclude https://github.com/jqlang/jq/wiki/jq-Language-Description
             --exclude https://github.com/google/zetasql/blob/master/docs/pipe-syntax.md
