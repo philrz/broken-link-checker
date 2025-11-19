@@ -6,6 +6,7 @@ on:
       site:
         required: true
         type: string
+        default: https://superdb.org/
 
 jobs:
   broken-linkcheck:
@@ -16,11 +17,11 @@ jobs:
         with:
           url: ${{ inputs.site }}
           cmd_params:
-            --verbose
             --timeout 300
             --buffer-size=16384
             --header="Accept-Encoding:zstd,br,gzip,deflate"
             --header="User-Agent:Mozilla/5.0"
             --exclude x.com
-            --exclude twitter.com
-            --exclude https://github.com/lz4/lz4/blob/master/doc/lz4_Block_format.md  # Due to HTTP 429 errors
+            --exclude https://github.com/brimdata/super/tree/main/performance
+            --exclude https://github.com/lz4/lz4/blob/master/doc/lz4_Block_format.md
+            --exclude https://specifications.freedesktop.org
