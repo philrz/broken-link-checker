@@ -18,6 +18,9 @@ jobs:
           url: ${{ inputs.site }}
           cmd_params:
             --timeout 300
+            --max-connections=5
+            --max-connections-per-host=2
+            --rate-limit=10
             --buffer-size=16384
             --header="Accept-Encoding:zstd,br,gzip,deflate"
             --header="User-Agent:Mozilla/5.0"
