@@ -11,6 +11,10 @@ on:
 # Link checker config details
 # ===========================
 #
+# --buffer-size=16384
+#
+#   Avoids "error when reading response headers: small read buffer. Increase ReadBufferSize."
+#
 # --exclude github.com.*#
 #
 #   Due to "not found" failures when crawling GitHub fragment identifiers
@@ -41,10 +45,10 @@ jobs:
           url: ${{ inputs.site }}
           cmd_params:
             --verbose
-            --timeout 300
             --max-connections=5
             --max-connections-per-host=2
             --rate-limit=10
+            --buffer-size=16384
             --header="Accept-Encoding:zstd,br,gzip,deflate"
             --header="User-Agent:Mozilla/5.0"
             --exclude github.com.*#
