@@ -8,8 +8,21 @@ on:
         type: string
         default: https://superdb.org/
 
-# Link checker config details
-# ===========================
+# Link checker config details as of November 19, 2025
+# ===================================================
+#
+# --timeout 300
+#
+#   Avoids timeout failures checking www.postgresql.org.
+#
+#
+# --max-connections=5
+# --max-connections-per-host=2
+# --rate-limit=10
+#
+#    A gentler crawl config vs. the defaults which caused timeouts to many
+#    random URLs. This combo was recommened by Claude AI and not only
+#    eliminated timeouts but brought run time down from 5 minutes to <1 minute.
 #
 # --buffer-size=16384
 #
@@ -19,7 +32,7 @@ on:
 #
 #   Due to "not found" failures when crawling GitHub fragment identifiers
 #   dynamically generated via JavaScript. See https://github.com/raviqqe/muffet/issues/144.
-#   Links covered by this as of November 19, 2026:
+#   Links covered by this:
 #   - https://github.com/google/zetasql/blob/master/docs/pipe-syntax.md#pipe-operator-semantics
 #   - https://github.com/jqlang/jq/wiki/jq-Language-Description#the-jq-language
 # 
@@ -45,11 +58,11 @@ jobs:
           url: ${{ inputs.site }}
           cmd_params:
             --verbose
+            --timeout 300
             --max-connections=5
             --max-connections-per-host=2
             --rate-limit=10
             --buffer-size=16384
-            --header="Accept-Encoding:zstd,br,gzip,deflate"
             --header="User-Agent:Mozilla/5.0"
             --exclude github.com.*#
             --exclude https://dl.acm.org/doi/pdf/10.1145/984549.984551
