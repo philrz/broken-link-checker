@@ -6,7 +6,7 @@ on:
       site:
         required: true
         type: string
-        default: https://superdb.org/
+        default: https://www.brimdata.io/
 
 # Link checker config details as of November 19, 2025
 # ===================================================
@@ -62,13 +62,10 @@ jobs:
         with:
           url: ${{ inputs.site }}
           cmd_params:
+            --verbose
             --timeout 300
             --max-connections=5
             --max-connections-per-host=2
             --rate-limit=10
             --buffer-size=16384
             --header="User-Agent:Mozilla/5.0"
-            --exclude github.com.*#
-            --exclude https://dl.acm.org/doi/pdf/10.1145/984549.984551
-            --exclude https://www.researchgate.net/publication/221325979_Union_Types_for_Semistructured_Data
-            --exclude https://github.com/lz4/lz4/blob/master/doc/lz4_Block_format.md
