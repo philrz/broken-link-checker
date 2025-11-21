@@ -24,5 +24,6 @@ jobs:
             --rate-limit=10
             --buffer-size=16384
             --header="User-Agent:Mozilla/5.0"
+            --max-response-body-size 1000000000
             --exclude linkedin.com
             --exclude github.com.*#
