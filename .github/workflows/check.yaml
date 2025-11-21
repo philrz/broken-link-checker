@@ -6,7 +6,7 @@ on:
       site:
         required: true
         type: string
-        default: https://www.brimdata.io/
+        default: https://jocular-choux-3cf6d8.netlify.app/
 
 # Link checker config details as of November 19, 2025
 # ===================================================
