@@ -19,11 +19,11 @@ jobs:
           cmd_params:
             --verbose
             --timeout 300
-            --max-connections=5
-            --max-connections-per-host=2
-            --rate-limit=10
+            --max-connections=3
+            --max-connections-per-host=1
+            --rate-limit=5
             --buffer-size=16384
-            --header="User-Agent:Mozilla/5.0"
+            --header="User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
             --max-response-body-size 1000000000
             --exclude linkedin.com
             --exclude github.com.*#
